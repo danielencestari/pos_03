@@ -1,0 +1,45 @@
+syntax = "proto3";
+package pb;
+option go_package = "internal/infra/grpc/pb";
+
+message CreateOrderRequest {
+  string id = 1;
+  float price = 2;
+  float tax = 3;
+}
+
+message CreateOrderResponse {
+  string id = 1;
+  float price = 2;
+  float tax = 3;
+  float final_price = 4;
+}
+
+// Mensagem para requisição de listagem de orders
+message ListOrdersRequest {
+  int32 page = 1;   // Número da página
+  int32 limit = 2;  // Limite de registros por página
+  string sort = 3;  // Campo para ordenação
+}
+
+// Mensagem para uma order individual na resposta
+message OrderItem {
+  string id = 1;
+  float price = 2;
+  float tax = 3;
+  float final_price = 4;
+}
+
+// Mensagem de resposta da listagem com metadados de paginação
+message ListOrdersResponse {
+  repeated OrderItem orders = 1;  // Lista de orders (repeated = array)
+  int32 page = 2;                 // Página atual
+  int32 limit = 3;                // Limite por página
+  int32 total = 4;                // Total de registros
+  int32 total_pages = 5;          // Total de páginas
+}
+
+service OrderService {
+  rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
+  rpc ListOrders(ListOrdersRequest) returns (ListOrdersResponse);  // Novo método
+}

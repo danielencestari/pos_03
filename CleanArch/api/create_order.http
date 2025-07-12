@@ -1,0 +1,22 @@
+### Criar uma nova order
+POST http://localhost:8000/order HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+
+{
+    "id":"order-001",
+    "price": 100.5,
+    "tax": 0.5
+}
+
+### Listar orders (página 1, 10 por página, ordenado por id)
+GET http://localhost:8000/order?page=1&limit=10&sort=id HTTP/1.1
+Host: localhost:8000
+
+### Listar orders (página 2, 5 por página, ordenado por price)
+GET http://localhost:8000/order?page=2&limit=5&sort=price HTTP/1.1
+Host: localhost:8000
+
+### Listar orders (sem parâmetros - usa padrões)
+GET http://localhost:8000/order HTTP/1.1
+Host: localhost:8000

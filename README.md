@@ -14,7 +14,7 @@ Este projeto implementa um sistema de gerenciamento de orders usando **Clean Arc
 Clone o projeto:
 ```bash
 git clone https://github.com/danielencestari/pos_03.git
-cd pos_03/CleanArch
+cd pos_03
 ```
 
 ## 📋 **Funcionalidades**
@@ -54,7 +54,7 @@ cd pos_03/CleanArch
 ```bash
 # Clona o repositório
 git clone https://github.com/danielencestari/pos_03.git
-cd pos_03/CleanArch
+cd pos_03
 
 # Sobe todos os serviços
 docker compose up -d
@@ -283,35 +283,3 @@ golangci-lint run
 ```
 
 ---
-
-## 🤝 **Contribuindo**
-
-Contribuições são sempre bem-vindas! Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📄 **Licença**
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 👤 **Autor**
-
-**Daniel Encestari**
-- GitHub: [@danielencestari](https://github.com/danielencestari)
-- Repositório: [pos_03](https://github.com/danielencestari/pos_03)
-
-## 🌟 **Agradecimentos**
-
-- [Full Cycle](https://fullcycle.com.br/) pelo conhecimento em Clean Architecture
-- Comunidade Go pelo suporte e recursos
-- Todos os contribuidores que ajudaram a tornar este projeto melhor
-
----
-
-**Desenvolvido seguindo os princípios da Clean Architecture** 🏗️ 
-
-**Tecnologias**: Go 1.24 • Clean Architecture • REST • gRPC • GraphQL • MySQL • RabbitMQ • Docker 
